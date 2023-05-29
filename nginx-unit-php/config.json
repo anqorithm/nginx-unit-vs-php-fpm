@@ -1,0 +1,24 @@
+{
+    "listeners": {
+        "*:8300": {
+            "pass": "applications/app1"
+        },
+        "*:8301": {
+            "pass": "applications/app2"
+        }
+    },
+    "applications": {
+        "app1": {
+            "type": "php",
+            "root": "/var/www/html/app1",
+            "index": "index.php",
+            "processes": 500
+        },
+        "app2": {
+            "type": "php",
+            "root": "/var/www/html/app2",
+            "index": "index.php",
+            "processes": 500
+        }
+    }
+}

@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx.dockerfile
+    ports:
+      - "127.5.0.5:80:80"
+  unit:
+    build:
+      context: .
+      dockerfile: ./docker/unit.dockerfile
+    volumes:
+      - ./src/app1:/var/www/html/app1
+      - ./src/app2:/var/www/html/app2
