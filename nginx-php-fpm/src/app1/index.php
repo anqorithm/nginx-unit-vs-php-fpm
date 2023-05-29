@@ -1,3 +1,3 @@
 <?php
 
-phpinfo();
+echo "Hello world, I'm from app1!";
